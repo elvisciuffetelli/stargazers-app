@@ -16,12 +16,18 @@ export default StyleSheet.create({
   },
   titleContainer: {
     flex: 1,
-    padding: 5,
+    padding: 20,
+  },
+  errorMessage: {
+    color: "firebrick",
   },
   title: {
     marginTop: 20,
+    textAlign: "center",
+    fontWeight: '300',
   },
   listContainer: {
     flex: 1,
+    marginTop: 20,
   },
 });

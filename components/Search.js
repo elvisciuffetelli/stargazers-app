@@ -20,7 +20,7 @@ export default function Search({
         onChangeText={onChangeOwner}
         value={owner}
         placeholder="Repo owner"
-        errorStyle={{ color: "red" }}
+        errorStyle={{ color: "firebrick" }}
         errorMessage={fieldError}
       />
       <Input
@@ -28,10 +28,10 @@ export default function Search({
         onChangeText={onChangeRepo}
         value={repo}
         placeholder="Repo name"
-        errorStyle={{ color: "red" }}
+        errorStyle={{ color: "firebrick" }}
         errorMessage={fieldError}
       />
-      {errorMessage && <Text h3>{errorMessage}</Text>}
+      {errorMessage && <Text style={styles.errorMessage} h6>{errorMessage}</Text>}
       <Button
         title="SEARCH"
         size="md"

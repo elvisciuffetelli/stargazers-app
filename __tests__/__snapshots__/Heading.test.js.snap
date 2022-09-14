@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Heading /> It must render the subtitle correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    accessibilityRole="text"
+    style={
+      Object {
+        "color": "#242424",
+        "fontSize": 51.42857142857143,
+        "fontWeight": "300",
+        "marginTop": 20,
+        "textAlign": "center",
+      }
+    }
+  />
+  <Text
+    accessibilityRole="text"
+    style={
+      Object {
+        "color": "#242424",
+        "fontSize": 36,
+        "fontWeight": "300",
+        "marginTop": 20,
+        "textAlign": "center",
+      }
+    }
+  >
+    Some subtitle
+  </Text>
+</View>
+`;
+
+exports[`<Heading /> It must render the title correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    accessibilityRole="text"
+    style={
+      Object {
+        "color": "#242424",
+        "fontSize": 51.42857142857143,
+        "fontWeight": "300",
+        "marginTop": 20,
+        "textAlign": "center",
+      }
+    }
+  >
+    Some title
+  </Text>
+  <Text
+    accessibilityRole="text"
+    style={
+      Object {
+        "color": "#242424",
+        "fontSize": 36,
+        "fontWeight": "300",
+        "marginTop": 20,
+        "textAlign": "center",
+      }
+    }
+  />
+</View>
+`;

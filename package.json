@@ -23,6 +23,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/eslint-parser": "^7.18.9",
+    "@testing-library/react-native": "^11.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^8.23.1",
     "eslint-config-airbnb": "^19.0.4",

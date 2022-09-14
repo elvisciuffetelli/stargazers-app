@@ -1,33 +1,13 @@
 import { useState } from "react";
+import fetchUsers from "../api/fetchUsers";
 
 const useFetchUsers = () => {
   const [isLoading, setLoading] = useState(false);
-  const [owner, onChangeOwner] = useState();
-  const [repo, onChangeRepo] = useState();
+  const [owner, onChangeOwner] = useState("");
+  const [repo, onChangeRepo] = useState("");
   const [users, setUsers] = useState([]);
-  const [fieldError, setFieldError] = useState();
-  const [errorMessage, setErrorMessage] = useState();
-
-  async function fetchUsers(url) {
-    const res = await fetch(url);
-    console.log(res);
-    if (!res.ok) {
-      const message = `An error has occured: ${
-        res.status === 404 ? "repository not found" : res.status
-      }`;
-      throw new Error(message);
-    }
-
-    const json = await res.json();
-    console.log(json);
-    const data = json.map((user) => ({
-      id: user.id,
-      avatar_url: user.avatar_url,
-      name: user.login,
-    }));
-    console.log("users", data);
-    setUsers(data);
-  }
+  const [fieldError, setFieldError] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handlePress = () => {
     setUsers([]);
@@ -36,7 +16,8 @@ const useFetchUsers = () => {
       setLoading(true);
       const API_URL = `https://api.github.com/repos/${owner.trim()}/${repo.trim()}/stargazers`;
       fetchUsers(API_URL)
-        .then(() => {
+        .then((data) => {
+          setUsers(data);
           setErrorMessage("");
         })
         .catch((error) => {
