@@ -6,16 +6,39 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "test": "jest"
   },
   "dependencies": {
+    "@rneui/base": "^4.0.0-rc.6",
+    "@rneui/themed": "^4.0.0-rc.6",
     "expo": "~46.0.9",
     "expo-status-bar": "~1.4.0",
+    "jest": "^26.6.3",
+    "jest-expo": "^46.0.1",
+    "prop-types": "^15.8.1",
     "react": "18.0.0",
     "react-native": "0.69.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "@babel/eslint-parser": "^7.18.9",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-native": "^4.0.0",
+    "react-test-renderer": "18.0.0"
+  },
+  "jest": {
+    "verbose": true,
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!@react-native|react-native|@rneui)"
+    ]
   },
   "private": true
 }
